@@ -154,17 +154,18 @@ android {
         }
     }
     buildTypes {
+        // 判断是否有可用的 release 签名配置
+        def hasReleaseKeystore = project.hasProperty('MYAPP_UPLOAD_STORE_FILE') ||
+                rootProject.file("keystore.properties").exists()
+
         debug {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            // 有签名文件才用 release 签名；没有时回退到 debug 签名（仅用于本地测试构建）
+            signingConfig hasReleaseKeystore ? signingConfigs.release : signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-
-            signingConfig signingConfigs.release
         }
     }
 
