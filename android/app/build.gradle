@@ -123,7 +123,7 @@ android {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk true  // If true, also generate a universal APK
+            universalApk false  // If true, also generate a universal APK
             include (*reactNativeArchitectures())
         }
     }
@@ -181,8 +181,9 @@ android {
             } else {
                 output.versionCodeOverride =
                         defaultConfig.versionCode * 1000 + versionCodes.get(abi)
-                output.outputFileName =
-                        "${applicationName}-v${defaultConfig.versionName}-${abi}.apk"
+                output.outputFileName = abi == "arm64-v8a"
+                        ? "lx-music-byd-v${defaultConfig.versionName}-0.0.1.v8a.apk"
+                        : "${applicationName}-v${defaultConfig.versionName}-${abi}.apk"
             }
 
         }
