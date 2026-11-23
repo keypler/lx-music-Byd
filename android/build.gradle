@@ -15,9 +15,11 @@ buildscript {
         excludeAppGlideModule = true
     }
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        google()          // 官方 Google 仓库，获取 Android 插件必需
+        mavenCentral()    // 官方 Maven 中央仓库，获取 jaxb-runtime 等依赖
+        // 暂时注释或移除阿里云镜像，避免 502 干扰
+        // maven { url 'https://maven.aliyun.com/repository/public' }
+        // maven { url 'https://maven.aliyun.com/repository/google' }
     }
     dependencies {
         classpath('com.android.tools.build:gradle:8.6.1')
