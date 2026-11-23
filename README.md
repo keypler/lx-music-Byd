@@ -1,3 +1,14 @@
+> ## 关于本项目
+>
+> 本项目基于 **[洛雪音乐](https://github.com/lyswhut/lx-music-mobile) v1.9.2**（原作者：[lyswhut](https://github.com/lyswhut)）二次开发，其中适配比亚迪的部分代码照抄自 **[点点音悦](https://github.com/XuMaoyin/ddmusic)**（[@XuMaoyin](https://github.com/XuMaoyin)）。
+>
+> **当前适配情况**
+> - 主要适配了**比亚迪语音播放音乐**部分，可实现语音操作：播放周杰伦的歌、播放稻香、上一曲、下一曲、暂停播放、开始播放、打开洛雪音乐、播放收藏夹的歌
+> - 包名改为网易云音乐的包名以匹配比亚迪白名单，因此在比亚迪语音助手设置中可以正常选择洛雪音乐
+> - 洛雪音乐原应用图标上的 "Lx Music" 改为中文"洛雪音乐"，方便车机语音打开时识别
+>
+> *声明：本项目为个人学习用途的二次开发，与原作者及点点音悦无关；原项目地址：<https://github.com/lyswhut/lx-music-mobile>*
+
 <p align="center"><a href="https://github.com/lyswhut/lx-music-mobile"><img width="200" src="https://github.com/lyswhut/lx-music-mobile/blob/master/doc/images/icon.png" alt="lx-music logo"></a></p>
 
 <h1 align="center">LX Music 移动版</h1>
