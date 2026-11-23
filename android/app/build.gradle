@@ -112,7 +112,7 @@ android {
     defaultConfig {
         applicationId project.hasProperty('testAppId')
                 ? project.property('testAppId').toString()
-                : "cn.toside.music.mobile"
+                : "cn.kuwo.kwmusiccar"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode verCode
